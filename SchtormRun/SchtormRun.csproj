@@ -58,14 +58,19 @@
     <Compile Include="Controls\Windows\CommandLineWindow.xaml.cs">
       <DependentUpon>CommandLineWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Resources\Dictionaries\Localization\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
+    <Compile Include="Resources\Dictionaries\Localization\Resources.en-US.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.en-US.resx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -86,9 +91,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Dictionaries\Localization\Resources.en-US.resx" />
+    <EmbeddedResource Include="Resources\Dictionaries\Localization\Resources.en-US.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.en-US.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Dictionaries\Localization\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -105,6 +113,7 @@
     <Folder Include="AppFunctionality\ConfigManager\" />
     <Folder Include="AppFunctionality\KeyboardBackgroundHook\" />
     <Folder Include="AppFunctionality\SyntaxHighlighter\" />
+    <Folder Include="AppFunctionality\WindowCentralizer\" />
     <Folder Include="CommonApp\CenterNode\" />
     <Folder Include="CommonApp\DiscordRPC\" />
     <Folder Include="Controls\Pages\" />
