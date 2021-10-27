@@ -35,8 +35,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ICSharpCode.AvalonEdit, Version=6.1.2.30, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
+      <HintPath>..\packages\AvalonEdit.6.1.2.30\lib\net45\ICSharpCode.AvalonEdit.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,12 +59,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controls\Pages\CliPages\MainCommandLinePage.xaml.cs">
+      <DependentUpon>MainCommandLinePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Windows\CommandLineWindow.xaml.cs">
       <DependentUpon>CommandLineWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Windows\SubWindow.xaml.cs">
+      <DependentUpon>SubWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Resources\Dictionaries\Localization\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -99,6 +109,7 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -116,13 +127,27 @@
     <Folder Include="AppFunctionality\WindowCentralizer\" />
     <Folder Include="CommonApp\CenterNode\" />
     <Folder Include="CommonApp\DiscordRPC\" />
-    <Folder Include="Controls\Pages\" />
     <Folder Include="Controls\UserConrols\" />
     <Folder Include="Resources\Images\" />
-    <Folder Include="Resources\Styles\" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Controls\Pages\CliPages\MainCommandLinePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\Windows\CommandLineWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Windows\SubWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles\AvalonTextEditorStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles\ButtonStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

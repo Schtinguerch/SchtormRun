@@ -37,7 +37,7 @@ namespace SchtormRun.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Bahnschrift")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Cascadia Mono")]
         public string AppFontFamily {
             get {
                 return ((string)(this["AppFontFamily"]));
@@ -49,13 +49,13 @@ namespace SchtormRun.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public double AppUiScaling {
+        [global::System.Configuration.DefaultSettingValueAttribute("24")]
+        public double AppFontSize {
             get {
-                return ((double)(this["AppUiScaling"]));
+                return ((double)(this["AppFontSize"]));
             }
             set {
-                this["AppUiScaling"] = value;
+                this["AppFontSize"] = value;
             }
         }
         
@@ -140,6 +140,18 @@ namespace SchtormRun.Properties {
             }
             set {
                 this["EnabledDiscordRPC"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("14")]
+        public double AppBorderRadius {
+            get {
+                return ((double)(this["AppBorderRadius"]));
+            }
+            set {
+                this["AppBorderRadius"] = value;
             }
         }
     }

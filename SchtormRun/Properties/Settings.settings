@@ -6,10 +6,10 @@
       <Value Profile="(Default)">1000</Value>
     </Setting>
     <Setting Name="AppFontFamily" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Bahnschrift</Value>
+      <Value Profile="(Default)">Cascadia Mono</Value>
     </Setting>
-    <Setting Name="AppUiScaling" Type="System.Double" Scope="User">
-      <Value Profile="(Default)">1</Value>
+    <Setting Name="AppFontSize" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">24</Value>
     </Setting>
     <Setting Name="AppFontWeight" Type="System.String" Scope="User">
       <Value Profile="(Default)">Bold</Value>
@@ -31,6 +31,9 @@
     </Setting>
     <Setting Name="EnabledDiscordRPC" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="AppBorderRadius" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">14</Value>
     </Setting>
   </Settings>
 </SettingsFile>
