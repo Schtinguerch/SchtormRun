@@ -22,7 +22,7 @@ namespace SchtormRun.Resources.Dictionaries.Localization {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace SchtormRun.Resources.Dictionaries.Localization {
         ///   Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SchtormRun.Resources.Dictionaries.Localization.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace SchtormRun.Resources.Dictionaries.Localization {
         ///   обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,11 +61,11 @@ namespace SchtormRun.Resources.Dictionaries.Localization {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Введите команду....
+        ///   Ищет локализованную строку, похожую на Введите команду сюда....
         /// </summary>
-        internal static string EnterCommand {
+        public static string EnterCommandHere {
             get {
-                return ResourceManager.GetString("EnterCommand", resourceCulture);
+                return ResourceManager.GetString("EnterCommandHere", resourceCulture);
             }
         }
     }
