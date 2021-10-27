@@ -6,6 +6,11 @@
     StartupUri="Controls/Windows/CommandLineWindow.xaml">
     
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/AvalonTextEditorStyles.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Resources/Styles/ButtonStyles.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
