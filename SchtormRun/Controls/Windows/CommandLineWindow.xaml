@@ -9,12 +9,31 @@
     
     xmlns:globalization="clr-namespace:System.Globalization;assembly=mscorlib"
     xmlns:props="clr-namespace:SchtormRun.Properties"
-    xmlns:trans="clr-namespace:SchtormRun.Resources.Dictionaries.Localization"
     
     Title="SchtormRun" 
-    Height="450" Width="800">
+    WindowStartupLocation="CenterScreen"
+    Width="{Binding Path=AppWidth, Source={x:Static props:Settings.Default}}" 
+    Height="50"
     
+    Background="Transparent"
+    WindowStyle="None"
+    ResizeMode="CanMinimize"
+    AllowsTransparency="True">
+
     <Grid>
-        
+        <Border
+            Width="auto"
+            Height="auto"
+            
+            BorderThickness="0"
+            CornerRadius="{Binding Path=AppBorderRadius, Source={x:Static props:Settings.Default}}"
+            Background="{Binding Path=AppBackgroundColor, Source={x:Static props:Settings.Default}}"
+            Opacity="{Binding Path=AppBackgroundOpacity, Source={x:Static props:Settings.Default}}">
+
+            <Frame
+                x:Name="MainCommandLineFrame"
+                Source="../Pages/CliPages/MainCommandLinePage.xaml">
+            </Frame>
+        </Border>
     </Grid>
 </Window>
