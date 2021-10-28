@@ -35,5 +35,11 @@
     <Setting Name="AppBorderRadius" Type="System.Double" Scope="User">
       <Value Profile="(Default)">14</Value>
     </Setting>
+    <Setting Name="DiscordAppId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">902880104831676446</Value>
+    </Setting>
+    <Setting Name="ReplacementDictionaryPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">JsonData\Abbreviations.json</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

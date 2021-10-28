@@ -154,5 +154,29 @@ namespace SchtormRun.Properties {
                 this["AppBorderRadius"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("902880104831676446")]
+        public string DiscordAppId {
+            get {
+                return ((string)(this["DiscordAppId"]));
+            }
+            set {
+                this["DiscordAppId"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("JsonData\\Abbreviations.json")]
+        public string ReplacementDictionaryPath {
+            get {
+                return ((string)(this["ReplacementDictionaryPath"]));
+            }
+            set {
+                this["ReplacementDictionaryPath"] = value;
+            }
+        }
     }
 }
