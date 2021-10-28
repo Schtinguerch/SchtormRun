@@ -1,0 +1,24 @@
+﻿<Page x:Class="SchtormRun.Controls.Pages.CliPages.ChooseListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SchtormRun.Controls.Pages.CliPages"
+      mc:Ignorable="d" 
+      xmlns:props="clr-namespace:SchtormRun.Properties"
+      d:DesignHeight="250" d:DesignWidth="800"
+      d:MaxHeight="250"
+      Title="ChooseListPage">
+
+    <Grid Background="Transparent">
+        <ListBox
+            x:Name="ItemsListBox"
+            Background="Transparent"
+            
+            FontFamily="{Binding Path=AppFontFamily, Source={x:Static props:Settings.Default}}"
+            Foreground="{Binding Path=AppForegroundColor, Source={x:Static props:Settings.Default}}"
+            FontSize="{Binding Path=AppFontSize, Source={x:Static props:Settings.Default}}"
+            BorderThickness="0">
+        </ListBox>
+    </Grid>
+</Page>
