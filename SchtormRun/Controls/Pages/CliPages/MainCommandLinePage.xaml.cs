@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchtormRun.Controls.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,20 @@ namespace SchtormRun.Controls.Pages.CliPages
         public MainCommandLinePage()
         {
             InitializeComponent();
+
+            var testList = new List<string>()
+            {
+                "hello",
+                "world",
+                "programming",
+                "testing",
+                "markup"
+            };
+
+            var subw = new SubWindow();
+            subw.AdditionalFunctionalityFrame.Navigate(new ChooseListPage(testList));
+
+            subw.Show();
         }
     }
 }
