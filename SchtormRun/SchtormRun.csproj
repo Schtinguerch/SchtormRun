@@ -35,8 +35,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DiscordRPC">
+      <HintPath>..\..\KeyboardTrainer\WPFMeteroWindow\bin\Release\DiscordRPC.dll</HintPath>
+    </Reference>
     <Reference Include="ICSharpCode.AvalonEdit, Version=6.1.2.30, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
       <HintPath>..\packages\AvalonEdit.6.1.2.30\lib\net45\ICSharpCode.AvalonEdit.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ScriptMaker">
+      <HintPath>..\..\KeyboardTrainer\WPFMeteroWindow\bin\Debug\ScriptMaker.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -50,6 +59,9 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="Tech.CodeGeneration">
+      <HintPath>D:\Downloads\GitHub repos\Tech.CodeGeneration.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -59,6 +71,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AppFunctionality\BackgroundKeyboardHook\BackgroundKeyboardHook.cs" />
+    <Compile Include="CommonApp\CenterNode\CenterNode.cs" />
+    <Compile Include="CommonApp\DiscordRPC\DiscordRPC.cs" />
+    <Compile Include="Controls\Pages\CliPages\ChooseListPage.xaml.cs">
+      <DependentUpon>ChooseListPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Pages\CliPages\MainCommandLinePage.xaml.cs">
       <DependentUpon>MainCommandLinePage.xaml</DependentUpon>
     </Compile>
@@ -119,18 +137,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="AppFunctionality\CodePreprocessor\" />
-    <Folder Include="AppFunctionality\CommandInterpreter\" />
+    <Folder Include="AppFunctionality\Commands\" />
     <Folder Include="AppFunctionality\ConfigManager\" />
-    <Folder Include="AppFunctionality\KeyboardBackgroundHook\" />
     <Folder Include="AppFunctionality\SyntaxHighlighter\" />
     <Folder Include="AppFunctionality\WindowCentralizer\" />
-    <Folder Include="CommonApp\CenterNode\" />
-    <Folder Include="CommonApp\DiscordRPC\" />
     <Folder Include="Controls\UserConrols\" />
     <Folder Include="Resources\Images\" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Controls\Pages\CliPages\ChooseListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\Pages\CliPages\MainCommandLinePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
