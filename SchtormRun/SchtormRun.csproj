@@ -75,10 +75,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AppFunctionality\BackgroundKeyboardHook\BackgroundKeyboardHook.cs" />
+    <Compile Include="AppFunctionality\BackgroundKeyboardHook.cs" />
+    <Compile Include="AppFunctionality\CodeInput\AutoCompleter.cs" />
+    <Compile Include="AppFunctionality\CodeInput\AutocompletionRules\FileAutoCompleteRule.cs" />
+    <Compile Include="AppFunctionality\CodeInput\CompletionData.cs" />
+    <Compile Include="AppFunctionality\CommandHistory.cs" />
     <Compile Include="AppFunctionality\Commands\GoogleTranslator.cs" />
+    <Compile Include="AppFunctionality\Commands\IRule.cs" />
     <Compile Include="AppFunctionality\Commands\RunApplication.cs" />
+    <Compile Include="AppFunctionality\CodeInput\Highlighting.cs" />
+    <Compile Include="AppFunctionality\WinAPI\Interop.cs" />
     <Compile Include="CommonApp\CenterNode\CenterNode.cs" />
+    <Compile Include="CommonApp\ClassExtensions\NumberExtensions.cs" />
     <Compile Include="CommonApp\ClassExtensions\StringExtensions.cs" />
     <Compile Include="CommonApp\DiscordRPC\DiscordRPC.cs" />
     <Compile Include="Controls\Pages\CliPages\ChooseListPage.xaml.cs">
@@ -89,6 +97,9 @@
     </Compile>
     <Compile Include="Controls\Pages\CliPages\TranslationResultPage.xaml.cs">
       <DependentUpon>TranslationResultPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UserConrols\AutoCompleteItem.xaml.cs">
+      <DependentUpon>AutoCompleteItem.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Windows\CommandLineWindow.xaml.cs">
       <DependentUpon>CommandLineWindow.xaml</DependentUpon>
@@ -150,10 +161,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="AppFunctionality\ConfigManager\" />
-    <Folder Include="AppFunctionality\SyntaxHighlighter\" />
-    <Folder Include="AppFunctionality\WindowCentralizer\" />
-    <Folder Include="Controls\UserConrols\" />
+    <Folder Include="Resources\Images\AutoCompleteIcons\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controls\Pages\CliPages\ChooseListPage.xaml">
@@ -165,6 +173,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\Pages\CliPages\TranslationResultPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\UserConrols\AutoCompleteItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -180,11 +192,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Resources\Styles\AutocompletionStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resources\Styles\AvalonTextEditorStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resources\Styles\ButtonStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles\ScrollBarStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
