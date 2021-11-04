@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="SchtormRun.Controls.UserConrols.AutoCompleteItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SchtormRun.Controls.UserConrols"
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="360">
+    <Grid 
+        x:Name="ItemGrid"
+        Background="Transparent"
+        
+        Height="40" 
+        Width="auto">
+        
+        <StackPanel Orientation="Horizontal">
+            <Image
+                x:Name="Icon"
+                Margin="10 5 10 5"
+                
+                Stretch="UniformToFill"
+                Source="../../Resources/Images/AppIcons/ProcessWhite.png"
+                
+                Height="24"
+                Width="24">
+            </Image>
+
+            <TextBlock
+                x:Name="TextBlock"
+                VerticalAlignment="Center">
+                Autocompletion text
+            </TextBlock>
+        </StackPanel>    
+    </Grid>
+</UserControl>
