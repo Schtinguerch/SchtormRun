@@ -23,6 +23,12 @@ namespace SchtormRun.Controls.Pages.CliPages
         {
             InitializeComponent();
             CenterNode.AppWindow.OnCommandLineShown += BaseWindowShown;
+
+            var completer = new AutoCompleter(CommandTextEditor,
+                new List<IRule>()
+                {
+                    new FileAutoCompleteRule(),
+                });
         }
 
         private void BaseWindowShown()
@@ -38,7 +44,10 @@ namespace SchtormRun.Controls.Pages.CliPages
 
                 try
                 {
-                    command.Run(CommandTextEditor.Text);
+                    var expression = CommandTextEditor.Text.Preprocessed();
+
+                    CenterNode.CommandHistory.AddCommand(expression);
+                    command.Run(expression);
                 }
                 
                 catch (Exception ex)
@@ -47,5 +56,14 @@ namespace SchtormRun.Controls.Pages.CliPages
                 }
             }
         }
+
+        private void PreviousCommandButton_Click(object sender, RoutedEventArgs e) =>
+            CommandTextEditor.Text = CenterNode.CommandHistory.PreviousCommand();
+
+        private void NextCommandButton_Click(object sender, RoutedEventArgs e) =>
+            CommandTextEditor.Text = CenterNode.CommandHistory.NextCommand();
+
+        private void CommandTextEditor_TextChanged(object sender, EventArgs e) =>
+            CenterNode.SubWindow.Hide();
     }
 }
