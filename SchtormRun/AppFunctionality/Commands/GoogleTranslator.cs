@@ -30,8 +30,7 @@ namespace SchtormRun.AppFunctionality.Commands
 
             try
             {
-                CenterNode.SubWindow.AdditionalFunctionalityFrame.Navigate(
-                    new TranslationResultPage(textUrl, translatedText));
+                CenterNode.SubWindow.OpenPage(new TranslationResultPage(textUrl, translatedText));
             }
             
             catch (Exception ex)
