@@ -11,9 +11,9 @@
     xmlns:props="clr-namespace:SchtormRun.Properties"
     
     ShowInTaskbar="False"
-    Width="{Binding Path=AppWidth, Source={x:Static props:Settings.Default}}" 
-    Height="auto"
+    Width="{Binding Path=AppWidth, Source={x:Static props:Settings.Default}}"
     MaxHeight="{Binding Path=SubWindowMaxHeight, Source={x:Static props:Settings.Default}}"
+    Topmost="True"
     
     Background="Transparent"
     WindowStyle="None"

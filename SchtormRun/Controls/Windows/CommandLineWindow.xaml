@@ -15,6 +15,7 @@
     WindowStartupLocation="CenterScreen"
     Width="{Binding Path=AppWidth, Source={x:Static props:Settings.Default}}" 
     Height="50"
+    Topmost="True"
     
     Background="Transparent"
     WindowStyle="None"
