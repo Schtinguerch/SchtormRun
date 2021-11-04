@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using SchtormRun.Properties;
+
 namespace SchtormRun.Controls.Windows
 {
     /// <summary>
@@ -22,6 +24,16 @@ namespace SchtormRun.Controls.Windows
         public SubWindow()
         {
             InitializeComponent();
+        }
+
+        public void Display()
+        {
+            Show();
+            
+            Left = CenterNode.AppWindow.Left;
+            Width = CenterNode.AppWindow.Width;
+
+            Top = CenterNode.AppWindow.Top + CenterNode.AppWindow.ActualHeight + Settings.Default.AppBorderRadius;
         }
     }
 }

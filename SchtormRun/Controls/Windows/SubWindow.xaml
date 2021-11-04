@@ -13,6 +13,7 @@
     ShowInTaskbar="False"
     Width="{Binding Path=AppWidth, Source={x:Static props:Settings.Default}}" 
     Height="auto"
+    MaxHeight="{Binding Path=SubWindowMaxHeight, Source={x:Static props:Settings.Default}}"
     
     Background="Transparent"
     WindowStyle="None"
@@ -29,9 +30,9 @@
             Background="{Binding Path=AppBackgroundColor, Source={x:Static props:Settings.Default}}"
             Opacity="{Binding Path=AppBackgroundOpacity, Source={x:Static props:Settings.Default}}">
 
-            <Frame
-                x:Name="AdditionalFunctionalityFrame"
-                Margin="{Binding Path=AppBorderRadius, Source={x:Static props:Settings.Default}}">
+            <Frame 
+                x:Name="AdditionalFunctionalityFrame" 
+                NavigationUIVisibility="Hidden">
             </Frame>
         </Border>
     </Grid>
