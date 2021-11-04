@@ -226,5 +226,29 @@ namespace SchtormRun.Properties {
                 this["ProcessNotificationBackgroudColor"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("XmlData\\StandardCommands.xshd")]
+        public string StandardCommandsXmlPath {
+            get {
+                return ((string)(this["StandardCommandsXmlPath"]));
+            }
+            set {
+                this["StandardCommandsXmlPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("XmlData\\CalculatorCharacters.xshd")]
+        public string CalculatorCharactersXmlPath {
+            get {
+                return ((string)(this["CalculatorCharactersXmlPath"]));
+            }
+            set {
+                this["CalculatorCharactersXmlPath"] = value;
+            }
+        }
     }
 }

@@ -53,5 +53,11 @@
     <Setting Name="ProcessNotificationBackgroudColor" Type="System.String" Scope="User">
       <Value Profile="(Default)">Gray</Value>
     </Setting>
+    <Setting Name="StandardCommandsXmlPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">XmlData\StandardCommands.xshd</Value>
+    </Setting>
+    <Setting Name="CalculatorCharactersXmlPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">XmlData\CalculatorCharacters.xshd</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
