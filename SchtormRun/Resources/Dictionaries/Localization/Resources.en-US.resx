@@ -120,4 +120,13 @@
   <data name="EnterCommandHere" xml:space="preserve">
     <value>Enter a command here...</value>
   </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="TextCopiedToClipboard" xml:space="preserve">
+    <value>Copied to the clipboard</value>
+  </data>
+  <data name="Translation" xml:space="preserve">
+    <value>Translation</value>
+  </data>
 </root>

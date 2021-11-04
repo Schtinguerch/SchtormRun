@@ -68,5 +68,32 @@ namespace SchtormRun.Resources.Dictionaries.Localization {
                 return ResourceManager.GetString("EnterCommandHere", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ошибка.
+        /// </summary>
+        public static string Error {
+            get {
+                return ResourceManager.GetString("Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Скопировано в буфер обмена.
+        /// </summary>
+        public static string TextCopiedToClipboard {
+            get {
+                return ResourceManager.GetString("TextCopiedToClipboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Перевод.
+        /// </summary>
+        public static string Translation {
+            get {
+                return ResourceManager.GetString("Translation", resourceCulture);
+            }
+        }
     }
 }
