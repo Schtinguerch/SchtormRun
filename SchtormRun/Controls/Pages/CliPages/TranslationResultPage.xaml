@@ -1,0 +1,67 @@
+﻿<Page x:Class="SchtormRun.Controls.Pages.CliPages.TranslationResultPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SchtormRun.Controls.Pages.CliPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="50" d:DesignWidth="800"
+      Title="TranslationResultPage"
+      
+      xmlns:trans="clr-namespace:SchtormRun.Resources.Dictionaries.Localization">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel
+            Grid.Column="0"
+            Orientation="Horizontal">
+
+            <Button
+                x:Name="EnterUrlButton"
+                Style="{StaticResource RunButtonStyle}"
+                
+                Click="EnterUrlButton_Click">
+
+                <Button.Content>
+                    <Image 
+                        Stretch="None"
+                        Source="../../../Resources/Images/AppIcons/GoToUrlGray.png">
+                    </Image>
+                </Button.Content>
+            </Button>
+
+            <Button
+                x:Name="CopyTranslationButton"
+                Style="{StaticResource RunButtonStyle}"
+                
+                Click="CopyTranslationButton_Click">
+
+                <Button.Content>
+                    <Image 
+                        Stretch="None"
+                        Source="../../../Resources/Images/AppIcons/CopyGray.png">
+                    </Image>
+                </Button.Content>
+            </Button>
+        </StackPanel>
+
+
+        <TextBlock 
+            Grid.Column="1"
+            Grid.RowSpan="2"
+            
+            x:Name="TranslationResultTextBox"
+            Margin="10 12 0 0"
+            TextWrapping="Wrap">
+        </TextBlock>
+    </Grid>
+</Page>
