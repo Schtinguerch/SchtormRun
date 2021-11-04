@@ -12,7 +12,7 @@ namespace SchtormRun
         public static SubWindow SubWindow { get; set; }
         public static NotificationWindow NotificationWindow { get; set; }
         public static Dictionary<string, string> PreprocessorReplacement { get; set; }
-        public static List<string> CommandsHistory { get; set; }
+        public static CommandHistory CommandHistory { get; set; }
 
         public static void Initialize()
         {
@@ -20,7 +20,7 @@ namespace SchtormRun
             var path = Settings.Default.ReplacementDictionaryPath;
 
             PreprocessorReplacement = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(path));
-            CommandsHistory = new List<string>();
+            CommandHistory = new CommandHistory();
         }
     }
 }
