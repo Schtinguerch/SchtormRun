@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       
       xmlns:props="clr-namespace:SchtormRun.Properties"
-      xmlns:trans="clr-namespace:SchtormRun.Resources.Dictionaries.Localization"
+      xmlns:app="clr-namespace:SchtormRun"
       xmlns:avalon="http://icsharpcode.net/sharpdevelop/avalonedit"
       
       d:DesignHeight="50" d:DesignWidth="800"
@@ -35,7 +35,10 @@
                     Style="{StaticResource ConsoleStyle}"
                     
                     Grid.Column="1"
-                    Margin="10">
+                    Margin="10"
+                    
+                    SyntaxHighlighting="{x:Static app:Highlighting.StandardCommands}"
+                    TextChanged="CommandTextEditor_TextChanged">
                 </avalon:TextEditor>
 
                 <StackPanel
@@ -44,7 +47,9 @@
 
                     <Button
                         x:Name="PreviousCommandButton"
-                        Style="{StaticResource RunButtonStyle}">
+                        Style="{StaticResource RunButtonStyle}"
+                        
+                        Click="PreviousCommandButton_Click">
 
                         <Button.Content>
                             <TextBlock
@@ -57,7 +62,9 @@
 
                     <Button
                         x:Name="NextCommandButton"
-                        Style="{StaticResource RunButtonStyle}">
+                        Style="{StaticResource RunButtonStyle}"
+                        
+                        Click="NextCommandButton_Click">
 
                         <Button.Content>
                             <TextBlock
