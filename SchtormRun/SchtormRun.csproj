@@ -38,6 +38,9 @@
     <Reference Include="DiscordRPC">
       <HintPath>..\..\KeyboardTrainer\WPFMeteroWindow\bin\Release\DiscordRPC.dll</HintPath>
     </Reference>
+    <Reference Include="Hardcodet.Wpf.TaskbarNotification, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hardcodet.NotifyIcon.Wpf.1.0.5\lib\net451\Hardcodet.Wpf.TaskbarNotification.dll</HintPath>
+    </Reference>
     <Reference Include="ICSharpCode.AvalonEdit, Version=6.1.2.30, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
       <HintPath>..\packages\AvalonEdit.6.1.2.30\lib\net45\ICSharpCode.AvalonEdit.dll</HintPath>
     </Reference>
@@ -49,6 +52,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -72,7 +76,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AppFunctionality\BackgroundKeyboardHook\BackgroundKeyboardHook.cs" />
+    <Compile Include="AppFunctionality\Commands\GoogleTranslator.cs" />
+    <Compile Include="AppFunctionality\Commands\RunApplication.cs" />
     <Compile Include="CommonApp\CenterNode\CenterNode.cs" />
+    <Compile Include="CommonApp\ClassExtensions\StringExtensions.cs" />
     <Compile Include="CommonApp\DiscordRPC\DiscordRPC.cs" />
     <Compile Include="Controls\Pages\CliPages\ChooseListPage.xaml.cs">
       <DependentUpon>ChooseListPage.xaml</DependentUpon>
@@ -80,12 +87,18 @@
     <Compile Include="Controls\Pages\CliPages\MainCommandLinePage.xaml.cs">
       <DependentUpon>MainCommandLinePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Pages\CliPages\TranslationResultPage.xaml.cs">
+      <DependentUpon>TranslationResultPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Windows\CommandLineWindow.xaml.cs">
       <DependentUpon>CommandLineWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Windows\NotificationWindow.xaml.cs">
+      <DependentUpon>NotificationWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\Windows\SubWindow.xaml.cs">
       <DependentUpon>SubWindow.xaml</DependentUpon>
@@ -137,12 +150,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="AppFunctionality\Commands\" />
     <Folder Include="AppFunctionality\ConfigManager\" />
     <Folder Include="AppFunctionality\SyntaxHighlighter\" />
     <Folder Include="AppFunctionality\WindowCentralizer\" />
     <Folder Include="Controls\UserConrols\" />
-    <Folder Include="Resources\Images\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controls\Pages\CliPages\ChooseListPage.xaml">
@@ -153,7 +164,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\Pages\CliPages\TranslationResultPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\Windows\CommandLineWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Windows\NotificationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -169,6 +188,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Resources\Styles\TextBlockStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\AppIcons\CopyGray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\AppIcons\GoToUrlGray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\AppIcons\ErrorWhite.png" />
+    <Resource Include="Resources\Images\AppIcons\SuccessWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\AppIcons\ProcessWhite.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
