@@ -9,6 +9,7 @@
     
     xmlns:globalization="clr-namespace:System.Globalization;assembly=mscorlib"
     xmlns:props="clr-namespace:SchtormRun.Properties"
+    xmlns:tbar="http://www.hardcodet.net/taskbar"
     
     Title="SchtormRun" 
     WindowStartupLocation="CenterScreen"
@@ -18,7 +19,9 @@
     Background="Transparent"
     WindowStyle="None"
     ResizeMode="CanMinimize"
-    AllowsTransparency="True">
+    AllowsTransparency="True"
+    
+    PreviewKeyDown="Window_PreviewKeyDown">
 
     <Grid>
         <Border
@@ -30,10 +33,18 @@
             Background="{Binding Path=AppBackgroundColor, Source={x:Static props:Settings.Default}}"
             Opacity="{Binding Path=AppBackgroundOpacity, Source={x:Static props:Settings.Default}}">
 
-            <Frame
-                x:Name="MainCommandLineFrame"
-                Source="../Pages/CliPages/MainCommandLinePage.xaml">
-            </Frame>
+            <Grid>
+                <tbar:TaskbarIcon
+                    Visibility="Visible"
+                    ToolTipText="SchtormRun">
+
+                </tbar:TaskbarIcon>
+
+                <Frame
+                    x:Name="MainCommandLineFrame"
+                    Source="../Pages/CliPages/MainCommandLinePage.xaml">
+                </Frame>
+            </Grid>
         </Border>
     </Grid>
 </Window>
