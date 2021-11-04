@@ -1,0 +1,124 @@
+﻿<Window 
+    x:Class="SchtormRun.Controls.Windows.NotificationWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:SchtormRun.Controls.Windows"
+    mc:Ignorable="d"
+    
+    xmlns:props="clr-namespace:SchtormRun.Properties"
+        
+    Title="Notification" 
+    ShowInTaskbar="False"
+    
+    WindowStartupLocation="CenterScreen"
+    Width="auto" 
+    Height="50"
+    
+    Background="Transparent"
+    WindowStyle="None"
+    ResizeMode="CanMinimize"
+    AllowsTransparency="True">
+
+    <Window.Resources>
+        <Storyboard x:Key="ShowNotificationStoryoard">
+            <DoubleAnimation
+                Storyboard.TargetName="NotificationGrid"
+                Storyboard.TargetProperty="Opacity"
+                
+                Duration="0:0:0:1"
+                DecelerationRatio="0.5"
+                From="0"
+                To="1"
+                
+                AutoReverse="True">
+            </DoubleAnimation> 
+        </Storyboard>
+
+        <Storyboard x:Key="AppearanceProcessingStoryboard">
+            <DoubleAnimation
+                Storyboard.TargetName="NotificationGrid"
+                Storyboard.TargetProperty="Opacity"
+                
+                Duration="0:0:0:2"
+                DecelerationRatio="0.6"
+                From="0"
+                To="1">
+            </DoubleAnimation>
+
+            <DoubleAnimation
+                Storyboard.TargetName="ImageTranslateTransform"
+                Storyboard.TargetProperty="X"
+                
+                From="-60"
+                To="60"
+                
+                Duration="0:0:0:2"
+                AccelerationRatio="0.4"
+                
+                RepeatBehavior="Forever">
+                
+            </DoubleAnimation>
+        </Storyboard>
+
+        <Storyboard x:Key="HideProcessingStoryBoard">
+            <DoubleAnimation
+                Storyboard.TargetName="NotificationGrid"
+                Storyboard.TargetProperty="Opacity"
+                
+                Duration="0:0:0:2"
+                DecelerationRatio="0.6"
+                From="1"
+                To="0">
+            </DoubleAnimation>
+        </Storyboard>
+    </Window.Resources>
+
+    <Grid x:Name="NotificationGrid">
+        <Border
+            x:Name="NotificationBorder"
+            Background="Green"
+            
+            Width="auto"
+            Height="auto"
+            
+            BorderThickness="0"
+            
+            CornerRadius="{Binding Path=AppBorderRadius, Source={x:Static props:Settings.Default}}"
+            Opacity="{Binding Path=AppBackgroundOpacity, Source={x:Static props:Settings.Default}}">
+
+            <StackPanel
+                Orientation="Horizontal">
+
+                <Image 
+                    Stretch="None"
+                    Source="../../Resources/Images/AppIcons/SuccessWhite.png"
+                    
+                    x:Name="NotificationIconImage"
+                    Margin="16 0 0 0">
+
+                    <Image.RenderTransform>
+                        <TranslateTransform x:Name="ImageTranslateTransform"/>
+                    </Image.RenderTransform>
+                </Image>
+
+                <Rectangle
+                    x:Name="WallBetweenImageAndText"
+                    Fill="{Binding ElementName=NotificationBorder, Path=Background}"
+                    Width="16">
+                    
+                </Rectangle>
+
+                <TextBlock
+                    x:Name="NotificationTextBlock"
+                    Background="{Binding ElementName=NotificationBorder, Path=Background}"
+                    
+                    TextAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="0 0 20 0"> There's a notification text
+                </TextBlock>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
