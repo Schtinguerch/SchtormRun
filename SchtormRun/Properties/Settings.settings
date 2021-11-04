@@ -41,5 +41,17 @@
     <Setting Name="ReplacementDictionaryPath" Type="System.String" Scope="User">
       <Value Profile="(Default)">JsonData\Abbreviations.json</Value>
     </Setting>
+    <Setting Name="SubWindowMaxHeight" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">300</Value>
+    </Setting>
+    <Setting Name="SuccessNotificationBackgroundColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Green</Value>
+    </Setting>
+    <Setting Name="ErrorNotificationBackgroundColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Red</Value>
+    </Setting>
+    <Setting Name="ProcessNotificationBackgroudColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Gray</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

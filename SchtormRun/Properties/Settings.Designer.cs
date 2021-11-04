@@ -178,5 +178,53 @@ namespace SchtormRun.Properties {
                 this["ReplacementDictionaryPath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("300")]
+        public double SubWindowMaxHeight {
+            get {
+                return ((double)(this["SubWindowMaxHeight"]));
+            }
+            set {
+                this["SubWindowMaxHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Green")]
+        public string SuccessNotificationBackgroundColor {
+            get {
+                return ((string)(this["SuccessNotificationBackgroundColor"]));
+            }
+            set {
+                this["SuccessNotificationBackgroundColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Red")]
+        public string ErrorNotificationBackgroundColor {
+            get {
+                return ((string)(this["ErrorNotificationBackgroundColor"]));
+            }
+            set {
+                this["ErrorNotificationBackgroundColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Gray")]
+        public string ProcessNotificationBackgroudColor {
+            get {
+                return ((string)(this["ProcessNotificationBackgroudColor"]));
+            }
+            set {
+                this["ProcessNotificationBackgroudColor"] = value;
+            }
+        }
     }
 }
