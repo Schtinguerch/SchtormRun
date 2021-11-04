@@ -10,6 +10,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/AvalonTextEditorStyles.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="Resources/Styles/ButtonStyles.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Resources/Styles/TextBlockStyles.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
