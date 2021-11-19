@@ -13,22 +13,32 @@ namespace SchtormRun.Controls.Pages.CliPages
     /// </summary>
     public partial class MainCommandLinePage : Page
     {
-        private readonly CommandProcessor command = new CommandProcessor(new List<Command>()
+        private readonly CommandProcessor Command = new CommandProcessor(new List<Command>()
         {
             new RunApplication(),
             new GoogleTranslator(),
+            new ProcessKiller(),
         });
+
+        private readonly List<IRule> AutocompletionRules = new List<IRule>()
+        {
+            new FileAutoCompleteRule(),
+            new AbbreviationAutoCompleteRule(),
+            new KillingProcessesAutoCompleteRule(),
+        };
+
+        private readonly Dictionary<string, Page> SpecialPageCommands = new Dictionary<string, Page>()
+        {
+            { "=|calc", new CalculatorCommandLinePage() },
+        };
 
         public MainCommandLinePage()
         {
             InitializeComponent();
             CenterNode.AppWindow.OnCommandLineShown += BaseWindowShown;
 
-            var completer = new AutoCompleter(CommandTextEditor,
-                new List<IRule>()
-                {
-                    new FileAutoCompleteRule(),
-                });
+            var completer = new AutoCompleter(CommandTextEditor, AutocompletionRules);
+            var switcher = new SpecialCommandPageSwitcher(CommandTextEditor, SpecialPageCommands);
         }
 
         private void BaseWindowShown()
@@ -47,7 +57,7 @@ namespace SchtormRun.Controls.Pages.CliPages
                     var expression = CommandTextEditor.Text.Preprocessed();
 
                     CenterNode.CommandHistory.AddCommand(expression);
-                    command.Run(expression);
+                    Command.Run(expression);
                 }
                 
                 catch (Exception ex)
