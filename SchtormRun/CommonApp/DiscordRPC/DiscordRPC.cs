@@ -49,7 +49,7 @@ namespace SchtormRun
             string imageKey = "", 
             Button[] buttons = null) =>
             
-            _client.SetPresence(new RichPresence()
+            _client?.SetPresence(new RichPresence()
             {
                 Details = mainActivity,
                 State = additionalInfo,
