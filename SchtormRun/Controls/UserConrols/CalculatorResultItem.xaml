@@ -1,0 +1,96 @@
+﻿<UserControl 
+    x:Class="SchtormRun.Controls.UserConrols.CalculatorResultItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:SchtormRun.Controls.UserConrols"
+    mc:Ignorable="d" 
+    
+    xmlns:props="clr-namespace:SchtormRun.Properties"
+    xmlns:app="clr-namespace:SchtormRun"
+    xmlns:avalon="http://icsharpcode.net/sharpdevelop/avalonedit"
+    
+    d:DesignHeight="50" 
+    d:DesignWidth="600">
+
+    <!--
+    <UserControl.Resources>
+        <Storyboard x:Key="HoveredItemStoryboard">
+            <ColorAnimation>
+                
+            </ColorAnimation>
+        </Storyboard>
+    </UserControl.Resources>
+
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="OnMouseEnter">
+            <EventTrigger.Actions>
+                <BeginStoryboard Storyboard="{StaticResource HoveredItemStoryboard}"/>
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </UserControl.Triggers>
+    -->
+    
+    <Grid>
+        <Border 
+            Height="50"
+            Background="{Binding Path=AppBackgroundColor, Source={x:Static props:Settings.Default}}"
+            BorderThickness="0"
+            CornerRadius="{Binding Path=AppBorderRadius, Source={x:Static props:Settings.Default}}">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel
+                    Grid.Column="0"
+                    Orientation="Horizontal">
+                    
+                    <Button
+                        x:Name="CopyExpressionButton"
+                        Style="{StaticResource RunButtonStyle}"
+                        
+                        Click="CopyExpressionButton_Click">
+
+                        <Button.Content>
+                            <Image 
+                                Stretch="None"
+                                Source="../../Resources/Images/AppIcons/CopyGray.png">
+                            </Image>
+                        </Button.Content>
+                    </Button>
+
+                    <Button
+                        x:Name="EditExpressionButton"
+                        Style="{StaticResource RunButtonStyle}"
+                        
+                        Click="EditExpressionButton_Click">
+
+                        <Button.Content>
+                            <Image 
+                                Stretch="None"
+                                Source="../../Resources/Images/AppIcons/EditGray.png">
+                            </Image>
+                        </Button.Content>
+                    </Button>
+                </StackPanel>
+
+                <avalon:TextEditor
+                    Grid.Column="1"
+                    Margin="12 0 12 0" 
+                    
+                    x:Name="ExpressionTextEditor"
+                    Text="Math expression 5+7 = 12"
+                    
+                    Style="{StaticResource ConsoleStyle}"
+                    SyntaxHighlighting="{x:Static app:Highlighting.CalculatorCharacters}"
+                    
+                    IsReadOnly="True">
+                </avalon:TextEditor>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
