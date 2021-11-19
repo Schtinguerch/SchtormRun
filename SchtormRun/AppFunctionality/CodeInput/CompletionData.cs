@@ -42,7 +42,15 @@ namespace SchtormRun
             Text = text;
 
             if (!string.IsNullOrWhiteSpace(uriPath))
+            {
+                if (uriPath[0] == '>')
+                {
+                    Image = uriPath.Substring(1).GetIcon();
+                    return;
+                }
+                    
                 Image = new BitmapImage(new Uri(uriPath));
+            }
         }
 
         public void Complete(TextArea textArea, ISegment completionSegment, EventArgs insertionRequestEventArgs) =>
