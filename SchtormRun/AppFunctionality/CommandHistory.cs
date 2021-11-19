@@ -37,9 +37,9 @@ namespace SchtormRun
         {
             if (!_commandHistory.Contains(command))
             {
-                int insertIndex = _chosenCommandIndex + 1;
+                int insertIndex = _chosenCommandIndex;
 
-                if (insertIndex == _commandHistory.Count)
+                if (insertIndex == _commandHistory.Count - 1)
                     _commandHistory.Add(command);
                 else
                     _commandHistory.Insert(insertIndex, command);
