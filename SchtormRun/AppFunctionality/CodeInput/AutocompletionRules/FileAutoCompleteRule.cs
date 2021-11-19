@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SchtormRun
 {
-    internal class FileAutoCompleteRule : IRule
+    public class FileAutoCompleteRule : IRule
     {
         public string LastInputCharacter { get; set; } = "\\";
         public List<string> AutocompleteWords { get; set; } = new List<string>();
@@ -27,6 +27,8 @@ namespace SchtormRun
                 folders = Directory.GetFiles(baseDirectory);
 
                 AutocompleteWords.Clear();
+                AutocompleteDescriptions.Clear();
+                AutocompleteIcons.Clear();
             }
             
             catch
@@ -35,10 +37,20 @@ namespace SchtormRun
             }
 
             foreach (var folder in folders)
-                AutocompleteWords.Add(new FileInfo(folder).Name);
+            {
+                var folderInfo = new FileInfo(folder);
+
+                AutocompleteWords.Add(folderInfo.Name);
+                AutocompleteIcons.Add(">" + folderInfo.FullName);
+            }
 
             foreach (var file in files)
-                AutocompleteWords.Add(new FileInfo(file).Name);
+            {
+                var fileInfo = new FileInfo(file);
+
+                AutocompleteWords.Add(fileInfo.Name);
+                AutocompleteIcons.Add(">" + fileInfo.FullName);
+            }
 
             while (AutocompleteDescriptions.Count < AutocompleteWords.Count)
                 AutocompleteDescriptions.Add("");
