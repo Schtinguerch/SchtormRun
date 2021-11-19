@@ -5,8 +5,6 @@ using System.Web;
 using SchtormRun.Controls.Pages.CliPages;
 using ScriptMaker;
 
-using Localization = SchtormRun.Resources.Dictionaries.Localization.Resources;
-
 namespace SchtormRun.AppFunctionality.Commands
 {
     public class GoogleTranslator : Command
@@ -25,8 +23,6 @@ namespace SchtormRun.AppFunctionality.Commands
 
             var translatedText = TranslatedText(text, inputLanguageCode, outputLanguageCode);
             var textUrl = GetBrowserUrl(text, inputLanguageCode, outputLanguageCode);
-
-            CenterNode.SubWindow.Display();
 
             try
             {
