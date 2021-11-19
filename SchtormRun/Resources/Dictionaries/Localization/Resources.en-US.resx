@@ -123,6 +123,15 @@
   <data name="Error" xml:space="preserve">
     <value>Error</value>
   </data>
+  <data name="FunctionValueNotDefined" xml:space="preserve">
+    <value>function value isn't defined</value>
+  </data>
+  <data name="ProcessesNotFound" xml:space="preserve">
+    <value>Running processes not found</value>
+  </data>
+  <data name="RootGradeLessOne" xml:space="preserve">
+    <value>root grade is less than 1</value>
+  </data>
   <data name="TextCopiedToClipboard" xml:space="preserve">
     <value>Copied to the clipboard</value>
   </data>

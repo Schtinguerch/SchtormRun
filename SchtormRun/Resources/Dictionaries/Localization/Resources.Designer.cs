@@ -79,6 +79,33 @@ namespace SchtormRun.Resources.Dictionaries.Localization {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на значение функции не определено.
+        /// </summary>
+        public static string FunctionValueNotDefined {
+            get {
+                return ResourceManager.GetString("FunctionValueNotDefined", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Запущенные процессы не найдены.
+        /// </summary>
+        public static string ProcessesNotFound {
+            get {
+                return ResourceManager.GetString("ProcessesNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на основание корня меньше 1.
+        /// </summary>
+        public static string RootGradeLessOne {
+            get {
+                return ResourceManager.GetString("RootGradeLessOne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Скопировано в буфер обмена.
         /// </summary>
         public static string TextCopiedToClipboard {

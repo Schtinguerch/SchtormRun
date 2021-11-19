@@ -123,6 +123,15 @@
   <data name="Error" xml:space="preserve">
     <value>Ошибка</value>
   </data>
+  <data name="FunctionValueNotDefined" xml:space="preserve">
+    <value>значение функции не определено</value>
+  </data>
+  <data name="ProcessesNotFound" xml:space="preserve">
+    <value>Запущенные процессы не найдены</value>
+  </data>
+  <data name="RootGradeLessOne" xml:space="preserve">
+    <value>основание корня меньше 1</value>
+  </data>
   <data name="TextCopiedToClipboard" xml:space="preserve">
     <value>Скопировано в буфер обмена</value>
   </data>
