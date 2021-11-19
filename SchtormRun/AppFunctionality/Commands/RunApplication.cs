@@ -17,6 +17,7 @@ namespace SchtormRun.AppFunctionality.Commands
             if (tokens.Length == 1)
             {
                 Process.Start(tokens[0]);
+                CenterNode.AppWindow.Hide();
                 return;
             }
 
