@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Input;
 using System.Windows.Controls;
 
 using SchtormRun.Properties;
@@ -14,6 +15,12 @@ namespace SchtormRun.Controls.Windows
         public SubWindow()
         {
             InitializeComponent();
+
+            PreviewKeyDown += (s, e) =>
+            {
+                if (Keyboard.Modifiers == ModifierKeys.Alt && e.SystemKey == Key.Space)
+                    e.Handled = true;
+            };
         }
 
         public void Display()
@@ -28,6 +35,7 @@ namespace SchtormRun.Controls.Windows
 
         public void OpenPage(Page page)
         {
+            Display();
             AdditionalFunctionalityFrame.Navigate(page);
         }
     }
