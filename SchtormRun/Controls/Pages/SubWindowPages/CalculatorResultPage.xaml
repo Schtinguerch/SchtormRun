@@ -1,0 +1,46 @@
+﻿<Page x:Class="SchtormRun.Controls.Pages.SubWindowPages.CalculatorResultPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SchtormRun.Controls.Pages.SubWindowPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="800"
+      Title="CalculatorResultPage">
+
+    <Grid Margin="0 16 0 16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            Grid.Row="0"
+            VerticalAlignment="Center"
+            Margin="20 10 20 12">
+            
+            <Run 
+                x:Name="SymbolTextBoxRun"
+                Text="=">
+            </Run>
+            
+            <Run 
+                x:Name="ResultTextBoxRun" 
+                FontWeight="Bold"
+                d:Text="12"
+                
+                MouseDown="ResultTextBoxRun_MouseDown">
+            </Run>
+        </TextBlock>
+
+        <ScrollViewer
+            Grid.Row="1" 
+            HorizontalScrollBarVisibility="Hidden">
+
+            <StackPanel
+                x:Name="CalculationResultsStackPanel"
+                Orientation="Vertical">
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
