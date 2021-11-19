@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using gma.System.Windows;
 
@@ -33,6 +34,9 @@ namespace SchtormRun.Controls.Windows
             _hook.KeyDown += BackgroundKeyDown;
             _hook.KeyUp += BackgroundKeyUp;
         }
+
+        public void OpenPage(Page page) =>
+            MainCommandLineFrame.Navigate(page);
 
         private void BackgroundKeyUp(object sender, System.Windows.Forms.KeyEventArgs e) =>
             SetPressedState(false, e);
@@ -67,6 +71,15 @@ namespace SchtormRun.Controls.Windows
         {
             if (e.Key == Key.Escape)
             {
+                if (Keyboard.Modifiers == ModifierKeys.Shift)
+                {
+                    if (!MainCommandLineFrame.CanGoBack)
+                        return;
+
+                    MainCommandLineFrame.GoBack();
+                    return;
+                }
+
                 Hide();
                 CenterNode.SubWindow.Hide();
             }
