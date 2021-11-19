@@ -59,5 +59,8 @@
     <Setting Name="CalculatorCharactersXmlPath" Type="System.String" Scope="User">
       <Value Profile="(Default)">XmlData\CalculatorCharacters.xshd</Value>
     </Setting>
+    <Setting Name="AppBorderColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

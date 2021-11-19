@@ -250,5 +250,17 @@ namespace SchtormRun.Properties {
                 this["CalculatorCharactersXmlPath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("White")]
+        public string AppBorderColor {
+            get {
+                return ((string)(this["AppBorderColor"]));
+            }
+            set {
+                this["AppBorderColor"] = value;
+            }
+        }
     }
 }
