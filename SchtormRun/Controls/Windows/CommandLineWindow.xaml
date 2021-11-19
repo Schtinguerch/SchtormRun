@@ -43,7 +43,9 @@
 
                 <Frame
                     x:Name="MainCommandLineFrame"
-                    Source="../Pages/CliPages/MainCommandLinePage.xaml">
+                    Source="../Pages/CliPages/MainCommandLinePage.xaml"
+                    
+                    NavigationUIVisibility="Hidden">
                 </Frame>
             </Grid>
         </Border>
