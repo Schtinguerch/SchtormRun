@@ -24,7 +24,7 @@
                     <Grid>
                         <Grid.Background>
                             <SolidColorBrush
-                                Color="Black"
+                                Color="{Binding Path=AppBorderColor, Source={x:Static props:Settings.Default}}"
                                 Opacity="0.1">
                             </SolidColorBrush>
                         </Grid.Background>
@@ -38,6 +38,16 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type ToolTip}">
+        <Setter Property="Background" Value="{Binding Path=AppBackgroundColor, Source={x:Static props:Settings.Default}}"/>
+        <Setter Property="Foreground" Value="{Binding Path=AppForegroundColor, Source={x:Static props:Settings.Default}}"/>
+        <Setter Property="FontFamily" Value="{Binding Path=AppFontFamily, Source={x:Static props:Settings.Default}}"/>
+        <Setter Property="FontSize" Value="{Binding Path=AppFontSize, Source={x:Static props:Settings.Default}}"/>
+
+        <Setter Property="Opacity" Value="0.9"/>
+        <Setter Property="BorderThickness" Value="0"/>
     </Style>
 
 </ResourceDictionary>
