@@ -13,6 +13,7 @@
                 <ResourceDictionary Source="Resources/Styles/TextBlockStyles.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="Resources/Styles/AutocompletionStyles.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="Resources/Styles/ScrollBarStyles.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Resources/Styles/FlowDocumentsStyle.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
