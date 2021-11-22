@@ -19,13 +19,16 @@ namespace SchtormRun.Controls.Pages.CliPages
         private string _url;
         private string _text;
 
-        public TranslationResultPage(string url, string text)
+        public TranslationResultPage(string text, string url = "")
         {
             InitializeComponent();
             TranslationResultTextBox.Text = text;
 
             _url = url;
             _text = text;
+
+            if (string.IsNullOrEmpty(url))
+                ButtonPanel.Width = new GridLength(60d, GridUnitType.Pixel);
         }
 
         private void CopyTranslationButton_Click(object sender, RoutedEventArgs e)
