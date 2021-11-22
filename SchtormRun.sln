@@ -5,6 +5,16 @@ VisualStudioVersion = 17.0.31717.71
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchtormRun", "SchtormRun\SchtormRun.csproj", "{199DF842-287A-4895-8995-75AA2E457B41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchtormRunExchange", "SchtormRunExchange\SchtormRunExchange.csproj", "{A8FBD815-831C-4425-AB5B-85120FA08CCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextCustomCommandAppSample", "TextCustomCommandAppSample\TextCustomCommandAppSample.csproj", "{BAC8A089-CB8A-45F1-9329-119D0CC2AD0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextMarkdownCustomCommandAppSample", "TextMarkdownCustomCommandAppSample\TextMarkdownCustomCommandAppSample.csproj", "{57A3E03D-C67B-4611-985D-574E3D46DC49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebViewCustomCommandAppSample", "WebViewCustomCommandAppSample\WebViewCustomCommandAppSample.csproj", "{B4A66B56-5CDA-4486-B9FA-9EF05E0D53E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CustomCommandsSamples", "CustomCommandsSamples", "{BB549F69-EAC7-409C-982D-672BFEABCE6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +25,30 @@ Global
 		{199DF842-287A-4895-8995-75AA2E457B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{199DF842-287A-4895-8995-75AA2E457B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{199DF842-287A-4895-8995-75AA2E457B41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8FBD815-831C-4425-AB5B-85120FA08CCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8FBD815-831C-4425-AB5B-85120FA08CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8FBD815-831C-4425-AB5B-85120FA08CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8FBD815-831C-4425-AB5B-85120FA08CCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAC8A089-CB8A-45F1-9329-119D0CC2AD0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAC8A089-CB8A-45F1-9329-119D0CC2AD0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAC8A089-CB8A-45F1-9329-119D0CC2AD0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAC8A089-CB8A-45F1-9329-119D0CC2AD0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57A3E03D-C67B-4611-985D-574E3D46DC49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57A3E03D-C67B-4611-985D-574E3D46DC49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57A3E03D-C67B-4611-985D-574E3D46DC49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57A3E03D-C67B-4611-985D-574E3D46DC49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4A66B56-5CDA-4486-B9FA-9EF05E0D53E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4A66B56-5CDA-4486-B9FA-9EF05E0D53E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4A66B56-5CDA-4486-B9FA-9EF05E0D53E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4A66B56-5CDA-4486-B9FA-9EF05E0D53E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BAC8A089-CB8A-45F1-9329-119D0CC2AD0D} = {BB549F69-EAC7-409C-982D-672BFEABCE6F}
+		{57A3E03D-C67B-4611-985D-574E3D46DC49} = {BB549F69-EAC7-409C-982D-672BFEABCE6F}
+		{B4A66B56-5CDA-4486-B9FA-9EF05E0D53E2} = {BB549F69-EAC7-409C-982D-672BFEABCE6F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C09268EC-C83D-4569-89B7-315C7E544F89}
