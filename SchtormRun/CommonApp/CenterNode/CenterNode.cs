@@ -12,14 +12,18 @@ namespace SchtormRun
         public static SubWindow SubWindow { get; set; }
         public static NotificationWindow NotificationWindow { get; set; }
         public static Dictionary<string, string> PreprocessorReplacement { get; set; }
+        public static Dictionary<string, string> CustomCommandsDictionary { get; set; }
         public static CommandHistory CommandHistory { get; set; }
 
         public static void Initialize()
         {
-            DiscordRPC.Enabled = Settings.Default.EnabledDiscordRPC;
-            var path = Settings.Default.ReplacementDictionaryPath;
+            var abbreviationPath = Settings.Default.ReplacementDictionaryPath;
+            var customCommandsPath = Settings.Default.CustomCommandsDictionaryPath;
 
-            PreprocessorReplacement = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(path));
+            PreprocessorReplacement = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(abbreviationPath));
+            CustomCommandsDictionary = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(customCommandsPath));
+
+            DiscordRPC.Enabled = Settings.Default.EnabledDiscordRPC;
             CommandHistory = new CommandHistory();
         }
     }
