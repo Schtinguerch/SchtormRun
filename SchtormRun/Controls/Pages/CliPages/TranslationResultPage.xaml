@@ -9,27 +9,31 @@
       Title="TranslationResultPage"
       
       Height="auto"
-      xmlns:trans="clr-namespace:SchtormRun.Resources.Dictionaries.Localization">
+      xmlns:trans="clr-namespace:SchtormRun.Resources.Dictionaries.Localization"
+      xmlns:avalon="http://icsharpcode.net/sharpdevelop/avalonedit">
 
     <Grid Height="auto">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="120"></ColumnDefinition>
-            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="120" x:Name="ButtonPanel"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
 
         <StackPanel
             Grid.Column="0"
-            Orientation="Horizontal">
+            Orientation="Horizontal"
+            HorizontalAlignment="Right">
 
             <Button
                 x:Name="EnterUrlButton"
                 Style="{StaticResource RunButtonStyle}"
                 
+                VerticalAlignment="Top"
+                Height="50"
                 Click="EnterUrlButton_Click">
 
                 <Button.Content>
@@ -44,6 +48,8 @@
                 x:Name="CopyTranslationButton"
                 Style="{StaticResource RunButtonStyle}"
                 
+                VerticalAlignment="Top"
+                Height="50"
                 Click="CopyTranslationButton_Click">
 
                 <Button.Content>
@@ -56,13 +62,16 @@
         </StackPanel>
 
 
-        <TextBlock 
+        <TextBox
             Grid.Column="1"
             Grid.RowSpan="2"
-            
+                
             x:Name="TranslationResultTextBox"
+            Style="{StaticResource ConsoleTextBoxStyle}"
+            
             Margin="10 12 0 0"
-            TextWrapping="Wrap">
-        </TextBlock>
+            IsReadOnly="True">
+        </TextBox>
+
     </Grid>
 </Page>
