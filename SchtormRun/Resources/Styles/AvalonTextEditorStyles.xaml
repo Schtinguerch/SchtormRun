@@ -19,4 +19,14 @@
         <Setter Property="HorizontalScrollBarVisibility" Value="Disabled"/>
         <Setter Property="VerticalScrollBarVisibility" Value="Disabled"/>
     </Style>
+
+    <Style x:Key="ConsoleTextBoxStyle" TargetType="TextBox">
+        <Setter Property="Background" Value="Transparent"></Setter>
+        <Setter Property="Foreground" Value="{Binding Path=AppForegroundColor, Source={x:Static props:Settings.Default}}"></Setter>
+        <Setter Property="FontFamily" Value="{Binding Path=AppFontFamily, Source={x:Static props:Settings.Default}}"></Setter>
+        <Setter Property="FontSize" Value="{Binding Path=AppFontSize, Source={x:Static props:Settings.Default}}"></Setter>
+
+        <Setter Property="BorderThickness" Value="0"></Setter>
+        <Setter Property="TextWrapping" Value="Wrap"></Setter>
+    </Style>
 </ResourceDictionary>
