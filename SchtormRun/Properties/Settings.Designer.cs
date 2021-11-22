@@ -262,5 +262,29 @@ namespace SchtormRun.Properties {
                 this["AppBorderColor"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("JsonData\\CustomCommands.json")]
+        public string CustomCommandsDictionaryPath {
+            get {
+                return ((string)(this["CustomCommandsDictionaryPath"]));
+            }
+            set {
+                this["CustomCommandsDictionaryPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("18")]
+        public double AppSmallFontSize {
+            get {
+                return ((double)(this["AppSmallFontSize"]));
+            }
+            set {
+                this["AppSmallFontSize"] = value;
+            }
+        }
     }
 }

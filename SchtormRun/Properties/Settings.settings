@@ -62,5 +62,11 @@
     <Setting Name="AppBorderColor" Type="System.String" Scope="User">
       <Value Profile="(Default)">White</Value>
     </Setting>
+    <Setting Name="CustomCommandsDictionaryPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">JsonData\CustomCommands.json</Value>
+    </Setting>
+    <Setting Name="AppSmallFontSize" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">18</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
