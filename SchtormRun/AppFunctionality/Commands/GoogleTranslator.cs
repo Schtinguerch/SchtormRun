@@ -26,7 +26,7 @@ namespace SchtormRun.AppFunctionality.Commands
 
             try
             {
-                CenterNode.SubWindow.OpenPage(new TranslationResultPage(textUrl, translatedText));
+                CenterNode.SubWindow.OpenPage(new TranslationResultPage(translatedText, textUrl));
             }
             
             catch (Exception ex)
