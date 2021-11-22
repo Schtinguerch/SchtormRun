@@ -13,14 +13,14 @@ namespace SchtormRun.Controls.Pages.CliPages
     /// </summary>
     public partial class MainCommandLinePage : Page
     {
-        private readonly CommandProcessor Command = new CommandProcessor(new List<Command>()
+        private CommandProcessor _command = new CommandProcessor(new List<Command>()
         {
             new RunApplication(),
             new GoogleTranslator(),
             new ProcessKiller(),
         });
 
-        private readonly List<IRule> AutocompletionRules = new List<IRule>()
+        private List<IRule> _autocompletionRules = new List<IRule>()
         {
             new FileAutoCompleteRule(),
             new AbbreviationAutoCompleteRule(),
@@ -37,8 +37,11 @@ namespace SchtormRun.Controls.Pages.CliPages
             InitializeComponent();
             CenterNode.AppWindow.OnCommandLineShown += BaseWindowShown;
 
-            var completer = new AutoCompleter(CommandTextEditor, AutocompletionRules);
+            var completer = new AutoCompleter(CommandTextEditor, _autocompletionRules);
             var switcher = new SpecialCommandPageSwitcher(CommandTextEditor, SpecialPageCommands);
+
+             foreach (var command in CenterNode.CustomCommandsDictionary)
+                _command.Commands.Add(new CustomCommand(command.Key, command.Value));
         }
 
         private void BaseWindowShown()
@@ -57,12 +60,12 @@ namespace SchtormRun.Controls.Pages.CliPages
                     var expression = CommandTextEditor.Text.Preprocessed();
 
                     CenterNode.CommandHistory.AddCommand(expression);
-                    Command.Run(expression);
+                    _command.Run(expression);
                 }
                 
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    CenterNode.NotificationWindow.ShowError(ex.Message);
                 }
             }
         }
