@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using gma.System.Windows;
+using SchtormRun.Controls.Pages.CliPages;
 
 namespace SchtormRun.Controls.Windows
 {
@@ -33,6 +29,8 @@ namespace SchtormRun.Controls.Windows
             
             _hook.KeyDown += BackgroundKeyDown;
             _hook.KeyUp += BackgroundKeyUp;
+
+            OpenPage(new MainCommandLinePage());
         }
 
         public void OpenPage(Page page) =>
