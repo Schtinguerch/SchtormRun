@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SchtormRunExchange.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="OutputVariable" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SRE_outputValue</Value>
+    </Setting>
+    <Setting Name="ApplicationTheme" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SRE_appTheme</Value>
+    </Setting>
+    <Setting Name="ApplicationStartupPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SRE_appStartupPath</Value>
+    </Setting>
+    <Setting Name="ApplicationWindowWidth" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SRE_appWidth</Value>
+    </Setting>
+    <Setting Name="DataAccepted" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SRE_accepted</Value>
+    </Setting>
+    <Setting Name="SchtormTextType" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">schtorm_text</Value>
+    </Setting>
+    <Setting Name="SchtormMarkdownType" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">schtorm_markdown</Value>
+    </Setting>
+    <Setting Name="SchtormWebpageType" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">schtorm_webpage</Value>
+    </Setting>
+    <Setting Name="SchtormCodeWay" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">schtorm_code</Value>
+    </Setting>
+    <Setting Name="SchtormPathWay" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">schtorm_path</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
