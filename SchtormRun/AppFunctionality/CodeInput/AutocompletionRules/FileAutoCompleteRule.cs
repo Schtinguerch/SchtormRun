@@ -16,8 +16,19 @@ namespace SchtormRun
 
         public bool PreviousInputSuits(string input)
         {
-            input = input.Preprocessed().Trim(' ');
-            var baseDirectory = input.Substring(input.IndexOf(' ') + 1);
+            var baseDirectory = "";
+
+            try
+            {
+                input = input.Preprocessed().Trim(' ');
+                baseDirectory = input.Substring(input.IndexOf(':') - 1);
+            }
+
+            catch
+            {
+                return false;
+            }
+            
 
             string[] files, folders;
 
