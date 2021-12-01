@@ -12,6 +12,11 @@ namespace SchtormRun.Controls.Pages.SubWindowPages
         {
             InitializeComponent();
             WebViewElement.Source = new Uri(path);
+
+            
         }
+
+        public void DisposeWebPage() =>
+            WebViewElement.Dispose();
     }
 }
