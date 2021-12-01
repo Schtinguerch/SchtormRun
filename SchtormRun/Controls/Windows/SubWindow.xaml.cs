@@ -2,8 +2,10 @@
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Controls;
+using System.Windows.Navigation;
 
 using SchtormRun.Properties;
+using SchtormRun.Controls.Pages.SubWindowPages;
 
 namespace SchtormRun.Controls.Windows
 {
@@ -12,6 +14,8 @@ namespace SchtormRun.Controls.Windows
     /// </summary>
     public partial class SubWindow : Window
     {
+        private Page _lastOpenedPage;
+
         public SubWindow()
         {
             InitializeComponent();
@@ -35,8 +39,24 @@ namespace SchtormRun.Controls.Windows
 
         public void OpenPage(Page page)
         {
+            if (_lastOpenedPage != null && _lastOpenedPage is WebViewPage)
+                (_lastOpenedPage as WebViewPage).DisposeWebPage();
+
             Display();
+
             AdditionalFunctionalityFrame.Navigate(page);
+            _lastOpenedPage = page;
+        }
+
+        public void ClearAndHide()
+        {
+            if (Visibility != Visibility.Hidden)
+            {
+                if (_lastOpenedPage != null && _lastOpenedPage is WebViewPage)
+                    (_lastOpenedPage as WebViewPage).DisposeWebPage();
+
+                Hide();
+            }
         }
     }
 }
