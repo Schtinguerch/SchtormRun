@@ -77,6 +77,6 @@ namespace SchtormRun.Controls.Pages.CliPages
             CommandTextEditor.Text = CenterNode.CommandHistory.NextCommand();
 
         private void CommandTextEditor_TextChanged(object sender, EventArgs e) =>
-            CenterNode.SubWindow.Hide();
+            CenterNode.SubWindow.ClearAndHide();
     }
 }

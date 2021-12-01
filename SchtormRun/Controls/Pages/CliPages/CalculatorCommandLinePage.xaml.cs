@@ -57,7 +57,7 @@ namespace SchtormRun.Controls.Pages.CliPages
             _isRendered = false;
 
             CenterNode.AppWindow.MainCommandLineFrame.GoBack();
-            CenterNode.SubWindow.Hide();
+            CenterNode.SubWindow.ClearAndHide();
         }
 
         public void Load()
