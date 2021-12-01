@@ -18,10 +18,13 @@
     Background="Transparent"
     WindowStyle="None"
     ResizeMode="CanMinimize"
-    AllowsTransparency="True">
+    AllowsTransparency="True"
+    
+    Visibility="Hidden">
 
     <Grid>
         <Border
+            Name="WindowBorder"
             Width="auto"
             Height="auto"
             
